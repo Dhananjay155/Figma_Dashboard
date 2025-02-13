@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const RejectionTable = ({ data }) => (
   <div className="card border-0 shadow-sm">
