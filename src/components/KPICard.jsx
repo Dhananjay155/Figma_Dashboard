@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 
 export const KPICard = ({ icon: Icon, title, value, bgColor = 'bg-primary' }) => (
   <div className="col-md-3">

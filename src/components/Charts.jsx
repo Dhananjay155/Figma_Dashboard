@@ -36,7 +36,7 @@ export const RejectionPieChart = ({ data }) => {
               <Cell key={index} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
-          <Tooltip />
+          <Tooltip />z
           <Legend />
         </PieChart>
       </ResponsiveContainer>
