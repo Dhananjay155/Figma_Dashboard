@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 export const SplitChart = ({ data }) => (

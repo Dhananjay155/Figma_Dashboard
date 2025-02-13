@@ -1,0 +1,16 @@
+.sidebar-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .sidebar-btn:hover {
+    background: #007bff;
+    color: white;
+  }
