@@ -11,6 +11,12 @@
   }
   
   .sidebar-btn:hover {
-    background: #007bff;
+    background: #002BC5;
     color: white;
   }
+
+  .bg-darkblue {
+    background-color: #002BC5 !important;
+    color: white;
+  }
+  

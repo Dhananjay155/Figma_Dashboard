@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Camera, List, LayoutDashboard, Menu, X } from 'lucide-react';
+import { Camera, Image, LayoutDashboard, Menu, X } from 'lucide-react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets/logo.png';
 import '../App.css';
@@ -9,7 +9,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Toggle button for mobile */}
       <button
         className="btn d-lg-none position-fixed top-0 start-0 mt-3 ms-3 z-3"
         onClick={() => setIsOpen(!isOpen)}
@@ -18,14 +17,12 @@ const Sidebar = () => {
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* Overlay when sidebar is open */}
       <div
         className={`position-fixed top-0 start-0 h-100 w-100 bg-dark bg-opacity-50 d-lg-none ${isOpen ? 'd-block' : 'd-none'}`}
         style={{ zIndex: 1029 }}
         onClick={() => setIsOpen(false)}
       ></div>
 
-      {/* Sidebar */}
       <div
         className={`d-flex flex-column bg-white position-fixed start-0 top-0 h-100 d-lg-flex ${isOpen ? 'd-block' : 'd-none'}`}
         style={{
@@ -41,7 +38,6 @@ const Sidebar = () => {
           </div>
         </div>
 
-        {/* Sidebar buttons */}
         <div className="py-2">
           <button className="sidebar-btn">
             <LayoutDashboard size={20} />
@@ -54,7 +50,7 @@ const Sidebar = () => {
           </button>
 
           <button className="sidebar-btn">
-            <List size={20} />
+            <Image size={20} />
             <span className="ms-3">Event Log</span>
           </button>
         </div>

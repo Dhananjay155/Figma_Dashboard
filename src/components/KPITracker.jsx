@@ -1,4 +1,4 @@
-import { FileText, CheckCircle } from 'lucide-react';
+import { FileText, CheckCircle, Download } from 'lucide-react';
 import { Header } from './Header';
 import { KPICard } from './KPICard';
 import { RejectionTable } from './RejectionTable';
@@ -38,33 +38,62 @@ const KPITracker = () => {
   return (
     <div className="container-fluid p-0">
       <Header />
-      
-    
+
+     
+      <div className="d-flex justify-content-between align-items-center p-3 border border-0 rounded bg-white">
+        <select className="form-select w-auto">
+          <option>Application</option>
+          {mockData.applications.map(app => (
+            <option key={app.value} value={app.value}>{app.label}</option>
+          ))}
+        </select>
+
+        <select className="form-select w-auto">
+          <option>Line Number</option>
+          {mockData.lineNumbers.map(line => (
+            <option key={line.value} value={line.value}>{line.label}</option>
+          ))}
+        </select>
+
+        <select className="form-select w-auto">
+          <option>Reason for rejection</option>
+          {mockData.rejectionReasons.map(reason => (
+            <option key={reason.value} value={reason.value}>{reason.label}</option>
+          ))}
+        </select>
+
+        <input type="date" className="form-control w-auto" />
+
+        <button className="btn btn-primary d-flex align-items-center rounded-pill bg-darkblue">
+          <Download size={18} className="me-2" /> Download Data
+        </button>
+      </div>
+
       <div className="p-4">
         <div className="row g-4">
-          <KPICard 
+          <KPICard
             icon={FileText}
             title="Units Processed"
             value="2,575"
-            bgColor="bg-primary rounded-circle"
+            bgColor="bg-darkblue text-white rounded-circle"
           />
-          <KPICard 
+          <KPICard
             icon={CheckCircle}
             title="Units Passed"
             value="814"
-            bgColor="bg-primary rounded-circle"
+            bgColor="bg-darkblue text-white rounded-circle"
           />
-          <KPICard 
+          <KPICard
             icon={FileText}
             title="Units Rejected"
             value="12"
-            bgColor="bg-primary rounded-circle"
+            bgColor="bg-darkblue text-white rounded-circle"
           />
-          <KPICard 
+          <KPICard
             icon={FileText}
-            title="Throughput (Units/Entry)"
+            title="Throughput (Units/Minute)"
             value="110.41"
-            bgColor="bg-primary rounded-circle"
+            bgColor="bg-darkblue text-white rounded-circle"
           />
         </div>
       </div>
@@ -78,7 +107,7 @@ const KPITracker = () => {
             <RejectionPieChart data={mockData.pieData} />
           </div>
         </div>
-        
+
         <RejectionTable data={mockData.tableData} />
       </div>
     </div>

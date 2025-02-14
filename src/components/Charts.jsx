@@ -10,15 +10,15 @@ export const SplitChart = ({ data }) => (
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="passed" fill="blue" />
-        <Bar dataKey="rejected" fill="green" />
+        <Bar dataKey="passed" fill="#002BC5" />
+        <Bar dataKey="rejected" fill="#00D7C4" />
       </BarChart>
     </ResponsiveContainer>
   </div>
 );
 
 export const RejectionPieChart = ({ data }) => {
-  const COLORS = ['blue', 'green'];
+  const COLORS = ['#002BC5', '#00D7C4'];
 
   return (
     <div style={{ width: '100%', height: 350 }}>

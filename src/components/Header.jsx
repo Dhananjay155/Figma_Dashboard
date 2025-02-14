@@ -1,4 +1,3 @@
-import { ChevronDown } from 'lucide-react';
 import user from '../assets/user.png'
 export const Header = () => (
     <nav className="navbar navbar-light bg-white border-bottom  px-4 py-3">
@@ -9,8 +8,10 @@ export const Header = () => (
           alt="User avatar"
           className="rounded-circle"
         />
-        <span className="small">Dhananjay</span>
-        <ChevronDown size={16} />
+        <select className='border border-0' >
+          <option className="small ">Dhananjay</option>
+        </select>
+        
       </div>
     </nav>
   );
